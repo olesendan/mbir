@@ -151,6 +151,7 @@ swc_ind<-function(x, swc, type=c("previous","trend"), ts, te, main, xlab, ylab){
   graphics::lines(times,trivband.plus,lty=2,col="#666666")
   graphics::lines(times,trivband.minus,lty=2,col="#666666")
   graphics::arrows(times, x-te, times, x+te, length=0.05, angle=90, code=3)
+  noway
   }
 
 
