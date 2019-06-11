@@ -136,8 +136,8 @@ swc_ind<-function(x, swc, type=c("previous","trend"), ts, te, main, xlab, ylab){
 
   mbi<-ifelse(pos > 10 & neg > 10,"---",
               ifelse(pos <= 10 & neg <= 10,"Trivial",
-              ifelse(neg > 10 & triv >= 10,"Possible Decrease",
-                     ifelse(pos > 10 & triv >= 10,"Possibe Increase",
+              ifelse(neg > 10 & triv >= 10,"Possibly Decrease",
+                     ifelse(pos > 10 & triv >= 10,"Possibly Increase",
                             ifelse(pos < 90 & triv < 10 & neg < 10,"Likely Increase",
                                    ifelse(pos < 10 & triv < 10 & neg < 90,"Likely Decrease",
                                           ifelse(pos <= 10 & neg >= 90," Very Likely Decrease",
@@ -249,6 +249,8 @@ swc_ind<-function(x, swc, type=c("previous","trend"), ts, te, main, xlab, ylab){
   print(noway,row.names=F)
   rval <- list(slope=table1[1], rsq=table1[2],fstat=table1[3],p.value=table1[4])
   }
+  noway['te'] <- residual.scale
+noway
 }
 
 
